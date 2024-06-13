@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    width: 100%;
+    background-color: #02FF02;
+    overflow-x: hidden;
+}
+#container {
+    position: relative;
+    width: 1800px;
+    margin: 0 auto !important;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.fade-wrap {
+    /* 나타나는 효과가 1초동안 발생 */
+    transition: 1s;
+
+    /* 투명도 0 (안보임) */
+    opacity: 0;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    position: relative;
+    left: -50px;
+
+    margin-bottom: 20px;
+}
+.fade-wrap.fade-in {
+    /* 투명도 0 (보임) */
+    opacity: 1;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    left: 0;
+}
+.fade-wrap2 {
+    /* 나타나는 효과가 1초동안 발생 */
+    transition: 1s;
+
+    /* 투명도 0 (안보임) */
+    opacity: 0;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    position: relative;
+    top: -50px;
+
+    margin-bottom: 20px;
+}
+.fade-wrap2.fade-in {
+    /* 투명도 0 (보임) */
+    opacity: 1;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    top: 0;
+}
+
+
+header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+.gnb{
+    width: 40%;
+}
+.gnb nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.gnb nav ul li a{
+    text-decoration-line: none;
+    font-size: 1rem;
+    color: #000;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+}
+
+nav ul li .line::after {
+    margin-top: 2px;
+    transition: 0.4s;
+    content: '';
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #02FF02;
+}
+nav ul li:hover .line::after {
+    width: 100%;
+    background: #000
+}
+
+.logo{
+    margin-bottom: 20%;
+}
+
+.title{
+    margin-top: 5%;
+    text-align: center;
+}
+.title img{
+    width: 100%;
+    margin-top: 2%;
+}
+.search{
+    margin-top: 10%;
+    text-align: center;
+}
+#searchInput{
+    width: 40%;
+    height: 50px;
+    border-radius: 200px;
+    border: 3px solid #000;
+    background-color: #02FF02;
+    margin-bottom: 3%;
+    padding-left: 20px;
+}
+#searchInput::placeholder{
+    font-family: "Noto Sans", sans-serif;
+    color: #000;
+    font-size: 1rem;
+    
+}
+
+#resultList{
+    display: flex;
+    justify-content: center;
+}
+#resultList li{
+    width: 10%;
+    border-radius: 200px;
+    border: 3px solid #000;
+    background-color: #02FF02;
+    padding: 20px;
+    margin: 1%;
+    font-family: "Lalezar", system-ui;
+}
+#resultList li:hover{
+    background-color: #000000;
+    color: #02FF02;
+}
+#resultList:nth-child(3){
+    margin-left: 10%;
+}
+
+.best{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Lalezar", system-ui;
+    font-size: 2rem;
+}
+.best img{
+    width: 20%;
+}
+
+footer{
+    margin-top: 5%;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+    display: flex; /* 부모 요소를 flex 컨테이너로 설정 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    text-decoration: none; /* 링크 스타일 초기화 */
+    text-align: center; 
+}

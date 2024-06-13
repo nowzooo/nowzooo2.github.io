@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    width: 100%;
+    background-color: #02FF02;
+    overflow-x: hidden;
+}
+#container {
+    position: relative;
+    width: 1800px;
+    margin: 0 auto !important;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.fade-wrap {
+    /* 나타나는 효과가 1초동안 발생 */
+    transition: 1s;
+
+    /* 투명도 0 (안보임) */
+    opacity: 0;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    position: relative;
+    left: -50px;
+
+    margin-bottom: 20px;
+}
+.fade-wrap.fade-in {
+    /* 투명도 0 (보임) */
+    opacity: 1;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    left: 0;
+}
+.fade-wrap2 {
+    /* 나타나는 효과가 1초동안 발생 */
+    transition: 1s;
+
+    /* 투명도 0 (안보임) */
+    opacity: 0;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    position: relative;
+    top: -50px;
+
+    margin-bottom: 20px;
+}
+.fade-wrap2.fade-in {
+    /* 투명도 0 (보임) */
+    opacity: 1;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    top: 0;
+}
+
+
+header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+.gnb{
+    width: 40%;
+}
+.gnb nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.gnb nav ul li a{
+    text-decoration-line: none;
+    font-size: 1rem;
+    color: #000;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+}
+
+nav ul li .line::after {
+    margin-top: 2px;
+    transition: 0.4s;
+    content: '';
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #02FF02;
+}
+nav ul li:hover .line::after {
+    width: 100%;
+    background: #000
+}
+
+.logo{
+    margin-bottom: 20%;
+}
+
+
+.title{
+    margin-top: 5%;
+    text-align: center;
+}
+.title img{
+    width: 100%;
+    margin-top: 2%;
+}
+
+.lp_wrap{
+    text-align: center;
+    margin-top: 6%;
+    position: relative;
+}
+
+#container2{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 20%;
+    z-index: -1; /* 다른 요소들보다 뒤에 위치하도록 설정 */
+    pointer-events: none; /* 필요한 경우 SVG 요소를 클릭을 통과시킵니다 */
+    transform: rotate(45deg);
+}
+#container3{
+    position: absolute;
+    width: 100%;
+    right: 50%;
+    top: 20%;
+    z-index: -1; /* 다른 요소들보다 뒤에 위치하도록 설정 */
+    pointer-events: none; /* 필요한 경우 SVG 요소를 클릭을 통과시킵니다 */
+    transform: rotate(-45deg);
+}
+#container4{
+    position: absolute;
+    width: 100%;
+    top: 320%;
+    z-index: -1; /* 다른 요소들보다 뒤에 위치하도록 설정 */
+    pointer-events: none; /* 필요한 경우 SVG 요소를 클릭을 통과시킵니다 */
+    transform: rotate(0);
+}
+
+.lp_wrap h2{
+    font-size: 2rem;
+    font-family: "Lalezar", system-ui;
+}
+.lp{
+    margin-top: 5%;
+}
+
+.lp p{
+    padding-top: 5%;
+    font-size: 2rem;
+    font-family: "Lalezar", system-ui;
+}
+
+.line{
+    width: 3px;
+    animation: moveLine 2s linear infinite;
+}
+
+.twinkle2 img{
+    position: absolute;
+}
+.twinkle2 img:first-child{
+    left: 10%; top: 20%;
+}
+.twinkle2 img:last-child{
+    right: 20%; top: 80%;
+}
+
+
+@keyframes moveLine {
+    0% {
+        stroke-dasharray: 10, 222;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 100, 222;
+        stroke-dashoffset: -232; /* Adjust based on the length of the line */
+    }
+}
+
+.artist{
+    margin-top: 15%;
+    text-align: center;
+}
+.artist h2{
+    font-size: 6rem;
+    font-family: "Lalezar", system-ui;
+    text-align: left;
+}
+.artist .img_wrap{
+    margin-top: 5%;
+}
+.artist .img_wrap img{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.artist .img_wrap img:nth-child(2), img:nth-child(4){
+    margin-right: 4%;
+}
+
+.welcome{
+    margin-top: 10%;
+}
+.welcome img{
+   width: 100%;
+}
+
+footer{
+    margin-top: 5%;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+    display: flex; /* 부모 요소를 flex 컨테이너로 설정 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    text-decoration: none; /* 링크 스타일 초기화 */
+    text-align: center; 
+}
+
+

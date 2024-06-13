@@ -1,0 +1,201 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    width: 100%;
+    background-color: #02FF02;
+    overflow-x: hidden;
+}
+#container {
+    position: relative;
+    width: 1800px;
+    margin: 0 auto !important;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.fade-wrap {
+    /* 나타나는 효과가 1초동안 발생 */
+    transition: 1s;
+
+    /* 투명도 0 (안보임) */
+    opacity: 0;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    position: relative;
+    left: -50px;
+
+    margin-bottom: 20px;
+}
+.fade-wrap.fade-in {
+    /* 투명도 0 (보임) */
+    opacity: 1;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    left: 0;
+}
+.fade-wrap2 {
+    /* 나타나는 효과가 1초동안 발생 */
+    transition: 1s;
+
+    /* 투명도 0 (안보임) */
+    opacity: 0;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    position: relative;
+    top: -50px;
+
+    margin-bottom: 20px;
+}
+.fade-wrap2.fade-in {
+    /* 투명도 0 (보임) */
+    opacity: 1;
+
+    /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+    top: 0;
+}
+
+
+header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+.gnb{
+    width: 40%;
+}
+.gnb nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.gnb nav ul li a{
+    text-decoration-line: none;
+    font-size: 1rem;
+    color: #000;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+}
+
+nav ul li .line::after {
+    margin-top: 2px;
+    transition: 0.4s;
+    content: '';
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #02FF02;
+}
+nav ul li:hover .line::after {
+    width: 100%;
+    background: #000
+}
+
+.logo{
+    margin-bottom: 20%;
+}
+
+main .playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 150vh;
+  }
+  
+  .text {
+    font-size: 10vw;
+    letter-spacing: -.01em;
+    line-height: 100%;
+    margin: 0;
+    
+    width: 100%;
+    color: rgba(0, 143, 0, 0.2);
+    background: linear-gradient(to right, #000000, #000000) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+    
+  
+    border-bottom: 1px solid #2F2B28;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    font-family: "Lalezar", system-ui;
+  }
+  
+  .text span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #02FF02;
+    font-size: 8vw;
+    
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .text:hover > span {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .text a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .swiper-container {
+    width: 100%;
+}
+
+.swiper-slide {
+    text-align: center; /* 슬라이드 내부 요소 중앙 정렬 */
+}
+
+.swiper-slide img {
+    width: 30%;
+    object-fit: cover; /* 이미지를 슬라이드에 맞게 조정 */
+}
+.silde_title h2{
+    font-family: "Lalezar", system-ui;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.swiper-button-prev{
+    color: #000;
+    padding-left: 500px;
+}
+.swiper-button-next{
+    color: #000;
+    padding-right: 500px;
+}
+
+
+footer{
+    margin-top: 5%;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+    display: flex; /* 부모 요소를 flex 컨테이너로 설정 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    text-decoration: none; /* 링크 스타일 초기화 */
+    text-align: center; 
+}
